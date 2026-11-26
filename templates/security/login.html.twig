@@ -1,7 +1,15 @@
 {% extends '@theme/security/login.html.twig' %}
 
 {% block logo_login %}{% include 'partials/logo_login.html.twig' %}{% endblock %}
-{% block title %}{{- get_title() -}}{% endblock %}
+{% block title %}{{- constant('App\\Constants::SOFTWARE') }}, {{ constant('App\\Constants::TAGLINE') -}}{% endblock %}
+{% block login_box_msg %}{{ constant('App\\Constants::SOFTWARE') }}{% endblock %}
+
+{% block container_after %}
+    <p class="text-center text-secondary mt-4 mb-0">
+        &copy; <a href="{{ constant('App\\Constants::HOMEPAGE') }}" target="_blank" rel="noopener" class="link-secondary">Aariva</a>
+        · Based on <a href="{{ constant('App\\Constants::UPSTREAM') }}" target="_blank" rel="noopener" class="link-secondary">Kimai</a> open source
+    </p>
+{% endblock %}
 
 {% block head %}
     {% include 'partials/head.html.twig' %}

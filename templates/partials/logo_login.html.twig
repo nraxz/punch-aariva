@@ -1,12 +1,10 @@
 {% set logo = config('theme.branding.logo') %}
-{% set company = config('theme.branding.company') %}
+{% set company = config('theme.branding.company')|default(constant('App\\Constants::SOFTWARE')) %}
 {% if logo is not empty %}
-    <img src="{{ logo }}" style="max-width: 300px;">
+    <img src="{{ logo }}" alt="{{ company }}" style="max-width: 280px; height: auto;">
 {% elseif company is not empty %}
-    <p>{{ company }}</p>
-{% elseif tabler_bundle.getLogoUrl() is not empty %}
-    <img alt="{{ get_title() }}" style="max-width: 150px;"
-         src="{% if '://' in tabler_bundle.getLogoUrl() %}{{ tabler_bundle.getLogoUrl() }}{% else %}{{ asset(tabler_bundle.getLogoUrl()) }}{% endif %}">
+    <p class="mb-0">{{ company }}</p>
 {% else %}
-    <p>{{ get_title()|raw }}</p>
+    <p class="mb-0">{{ get_title()|raw }}</p>
 {% endif %}
+<p class="text-secondary fs-5 fw-normal mt-2 mb-0">{{ constant('App\\Constants::TAGLINE') }}</p>

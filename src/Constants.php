@@ -25,7 +25,11 @@ final class Constants
     /**
      * The software name
      */
-    public const SOFTWARE = 'Kimai';
+    public const SOFTWARE = 'Aariva Punch';
+    /**
+     * Short product tagline shown on login and branding surfaces
+     */
+    public const TAGLINE = 'Time tracking system';
     /**
      * Used in multiple views
      */
@@ -37,7 +41,11 @@ final class Constants
     /**
      * Homepage, used in multiple views
      */
-    public const HOMEPAGE = 'https://www.kimai.org';
+    public const HOMEPAGE = 'https://aariva.co.uk';
+    /**
+     * Upstream open-source project credit
+     */
+    public const UPSTREAM = 'https://www.kimai.org';
     /**
      * Default color for Customer, Project and Activity entities
      */

@@ -1,0 +1,10 @@
+# Aariva Punch branding (committed fork defaults)
+kimai:
+    theme:
+        branding:
+            logo: '/images/aariva-logo.svg'
+            company: 'Aariva Punch'
+
+tabler:
+    options:
+        logo_url: '/images/aariva-logo.svg'

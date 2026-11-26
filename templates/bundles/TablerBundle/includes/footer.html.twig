@@ -3,7 +3,13 @@
     <div class="col-12 col-lg-auto mt-3 mt-lg-0">
         <ul class="list-inline list-inline-dots mb-0">
             <li class="list-inline-item">
-                Copyright &copy; <a href="https://www.kevinpapst.de/" target="_blank" class="link-secondary">Kevin Papst</a>
+                &copy; <a href="{{ constant('App\\Constants::HOMEPAGE') }}" target="_blank" rel="noopener" class="link-secondary">Aariva</a>
+                — {{ constant('App\\Constants::SOFTWARE') }}
+            </li>
+            <li class="list-inline-item">
+                Based on
+                <a href="{{ constant('App\\Constants::UPSTREAM') }}" target="_blank" rel="noopener" class="link-secondary">Kimai</a>
+                open source
             </li>
             <li class="list-inline-item">
                 <a class="link-secondary" href="{{ path('about') }}">
