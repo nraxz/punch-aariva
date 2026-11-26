@@ -18,3 +18,7 @@ phpstan.sh export-ignore
 phpunit.xml.dist export-ignore
 webpack.config.js export-ignore
 yarn.lock export-ignore
+
+# Built frontend assets use Subresource Integrity hashes. Keep exact bytes
+# (no CRLF conversion) so browsers do not block app.js on Windows checkouts.
+public/build/** -text
